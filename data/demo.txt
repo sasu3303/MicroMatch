@@ -1,0 +1,16 @@
+# One instrument, all prices in integer ticks.
+# Two sellers at 10000: maker 1 must fill before maker 2.
+LIMIT 1 SELL 10000 10
+LIMIT 2 SELL 10000 20
+LIMIT 3 SELL 10005 5
+BOOK
+# Buy 15: fills maker 1's 10, then 5 of maker 2.
+LIMIT 4 BUY 10000 15
+BOOK
+# Cancel remaining 15 of maker 2.
+CANCEL 2
+# Market buy fills 5 at 10005; remaining 3 expire.
+MARKET 5 BUY 8
+LIMIT 6 BUY 9990 12
+BOOK
+QUIT

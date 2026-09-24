@@ -1,0 +1,9 @@
+Test project MicroMatch/build-tsan
+    Start 1: matching_and_concurrency
+1/2 Test #1: matching_and_concurrency .........   Passed    4.79 sec
+    Start 2: tcp_protocol
+2/2 Test #2: tcp_protocol .....................   Passed    0.08 sec
+
+100% tests passed out of 2
+
+Total Test time (real) =   4.88 sec

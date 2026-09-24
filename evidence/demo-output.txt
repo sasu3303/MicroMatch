@@ -1,0 +1,39 @@
+MICROMATCH | local C++ exchange simulator
+Prices are integer ticks. No real trading occurs.
+
+> LIMIT 1 SELL 10000 10
+  accepted; remaining quantity: 10
+
+> LIMIT 2 SELL 10000 20
+  accepted; remaining quantity: 20
+
+> LIMIT 3 SELL 10005 5
+  accepted; remaining quantity: 5
+
+> BOOK
+  Bids: empty
+  Asks: 30 @ 10000 (2 orders), 5 @ 10005 (1 orders)
+
+> LIMIT 4 BUY 10000 15
+  Trade: maker 1 -> taker 4; 10 units at 10000 ticks
+  Trade: maker 2 -> taker 4; 5 units at 10000 ticks
+  accepted; remaining quantity: 0
+
+> BOOK
+  Bids: empty
+  Asks: 15 @ 10000 (1 orders), 5 @ 10005 (1 orders)
+
+> CANCEL 2
+  cancelled; remaining quantity: 15
+
+> MARKET 5 BUY 8
+  Trade: maker 3 -> taker 5; 5 units at 10005 ticks
+  market_remainder_expired; remaining quantity: 3
+
+> LIMIT 6 BUY 9990 12
+  accepted; remaining quantity: 12
+
+> BOOK
+  Bids: 12 @ 9990 (1 orders)
+  Asks: empty
+

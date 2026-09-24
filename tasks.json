@@ -1,0 +1,8 @@
+{
+  "version":"2.0.0",
+  "tasks":[
+    {"label":"CMake configure debug","type":"process","command":"cmake","args":["-S",".","-B","build-debug","-DCMAKE_BUILD_TYPE=Debug"],"problemMatcher":[]},
+    {"label":"CMake build debug","type":"process","command":"cmake","args":["--build","build-debug","-j","4"],"dependsOn":"CMake configure debug","problemMatcher":["$gcc"],"group":{"kind":"build","isDefault":true}},
+    {"label":"Run tests","type":"process","command":"ctest","args":["--test-dir","build-debug","--output-on-failure"],"dependsOn":"CMake build debug","problemMatcher":[]}
+  ]
+}

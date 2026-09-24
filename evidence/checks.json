@@ -1,0 +1,29 @@
+[
+  {
+    "file": "tests-release.txt",
+    "exit_code": 0,
+    "environment_override": {}
+  },
+  {
+    "file": "ctest-release.txt",
+    "exit_code": 0,
+    "environment_override": {}
+  },
+  {
+    "file": "ctest-asan.txt",
+    "exit_code": 0,
+    "environment_override": {
+      "ASAN_OPTIONS": "detect_leaks=0"
+    }
+  },
+  {
+    "file": "ctest-tsan.txt",
+    "exit_code": 0,
+    "environment_override": {}
+  },
+  {
+    "file": "demo-output.txt",
+    "exit_code": 0,
+    "environment_override": {}
+  }
+]

@@ -1,0 +1,25 @@
+PASS empty book
+PASS non-crossing limits
+PASS maker price and full fill
+PASS FIFO within price
+PASS best price before arrival
+PASS sell crosses highest bid
+PASS incoming remainder rests
+PASS market remainder expires
+PASS empty market expires
+PASS cancel middle preserves FIFO
+PASS cancel missing and filled
+PASS duplicate IDs rejected for session
+PASS invalid inputs do not consume ID
+PASS capacity rejection
+PASS depth aggregation and ordering
+PASS strict parser
+PASS randomized reference equivalence 10000 commands
+PASS queue drains after close
+PASS blocked consumer wakes on close
+PASS blocked producer wakes on close
+PASS zero queue capacity rejected
+PASS concurrent engine producers 4000 commands
+PASS engine destructor drains pending futures
+PASS engine rejects submission after close
+24 tests passed
