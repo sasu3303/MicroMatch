@@ -1,6 +1,6 @@
 # MicroMatch - C++ Exchange Simulator
 
-A C++20 learning project built around one instrument's order book. Submit limit/market orders, observe price-time-priority matching, cancel orders, inspect depth, and replay a deterministic scenario. A bounded queue connects producers to one matching thread. A local TCP gateway demonstrates message framing and socket ownership.
+A C++ learning project built around one instrument's order book. Submit limit/market orders, observe price-time-priority matching, cancel orders, inspect depth, and replay a deterministic scenario. A bounded queue connects producers to one matching thread. A local TCP gateway demonstrates message framing and socket ownership.
 
 This is an exchange **simulation**, not a trading strategy, broker integration, or production exchange. It uses no accounts, live market feeds, money, or external trading services.
 
@@ -20,11 +20,11 @@ The learning guide includes independent exercises, and the verification notes do
 
 ## Windows + VS Code: start here
 
-Use **Ubuntu through WSL** for the complete project, including its POSIX TCP server. Open `docs/WINDOWS_VSCODE.md` for exact steps. You do not need Python 3.12 specifically: the small helper scripts use Python 3.9+, while the core application needs a C++20 compiler.
+Use **Ubuntu through WSL** for the complete project, including its POSIX TCP server. Open `docs/WINDOWS_VSCODE.md` for exact steps. You do not need Python 3.12 specifically: the small helper scripts use Python 3.9+, while the core application needs a modern C++ compiler.
 
 ## Linux/WSL quick start
 
-Install a C++20-capable compiler (tested with GCC 13), CMake 3.20+, Python 3, and optionally GDB. From the extracted `MicroMatch` folder:
+Install a modern C++ compiler (tested with GCC 13), CMake 3.20+, Python 3, and optionally GDB. From the extracted `MicroMatch` folder:
 
 ```bash
 cmake -S . -B build -DCMAKE_BUILD_TYPE=Release

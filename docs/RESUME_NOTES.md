@@ -2,7 +2,7 @@
 
 Project name: **MicroMatch - C++ Exchange Simulator**.
 
-The code demonstrates C++20, price-time matching, data structures, RAII, producer/consumer synchronization, local TCP framing, CMake, testing, and benchmarking.
+The code demonstrates C++, price-time matching, data structures, RAII, producer/consumer synchronization, local TCP framing, CMake, testing, and benchmarking.
 
 ## Current facts
 
@@ -18,7 +18,7 @@ The code demonstrates C++20, price-time matching, data structures, RAII, produce
 
 After you understand the implementation, reproduce the results, and make an independent feature contribution, describe your actual work. Possible structure:
 
-- Extended a C++20 exchange simulator with [your feature], preserving price-time priority and validating [your edge cases].
+- Extended a C++ exchange simulator with [your feature], preserving price-time priority and validating [your edge cases].
 - Tested a bounded producer/consumer queue and single-owner matching engine using [checks you personally ran and understood].
 - Compared indexed order cancellation with a vector-scan baseline on [your dataset], measuring [your results] under [your environment].
 

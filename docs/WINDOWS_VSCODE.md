@@ -21,7 +21,7 @@ sudo apt update
 sudo apt install -y build-essential cmake gdb python3 unzip
 ```
 
-Use a current Ubuntu distribution with a C++20-capable GCC (tested GCC 13). Confirm:
+Use a current Ubuntu distribution with a modern C++ compiler (tested with GCC 13). Confirm:
 
 ```bash
 g++ --version
@@ -57,7 +57,7 @@ If GDB is not found, confirm it was installed inside Ubuntu. The GDB configurati
 ## Troubleshooting
 
 - `cmake: command not found`: install CMake inside Ubuntu, not only Windows.
-- `jthread` or `contains` missing: your compiler/standard library is too old or C++20 is not enabled. Use the supplied CMake build and a current toolchain.
+- `jthread` or `contains` missing: your compiler or standard library is too old. Use the supplied CMake build and a current toolchain.
 - CMake reports a different generator/source path: create a new build directory such as `build-wsl`; don't reuse a build directory made with another compiler/OS.
 - TCP port already used: start the server on `9001`, then run `python3 scripts/client.py --port 9001`.
 - Client disconnected after you paused: reconnect; the server uses a 60-second socket timeout.
